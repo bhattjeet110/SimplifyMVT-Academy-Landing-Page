@@ -1,0 +1,248 @@
+.why-medical {
+  background: white;
+}
+
+.why-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.why-content {
+  .section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    .highlight { color: var(--secondary); }
+  }
+
+  .lead-text {
+    font-size: 1.05rem;
+    color: var(--dark-gray);
+    margin-bottom: 12px;
+    line-height: 1.7;
+
+    strong { color: var(--primary); }
+  }
+
+  p {
+    color: var(--gray);
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+}
+
+.reasons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reason-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--light-bg);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--secondary);
+  transition: var(--transition);
+
+  &:hover {
+    background: white;
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+  }
+}
+
+.reason-number {
+  width: 28px;
+  height: 28px;
+  background: var(--secondary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.reason-icon {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  i {
+    color: white;
+    font-size: 1.1rem;
+  }
+}
+
+.reason-text {
+  h4 {
+    font-size: 0.95rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+/* Stats Visual */
+.stats-visual {
+  position: sticky;
+  top: 100px;
+}
+
+.visual-bg {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 60%, #3a7ab5 100%);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(1, 175, 222, 0.1);
+  }
+}
+
+.big-stat {
+  text-align: center;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+
+  .stat-num {
+    display: block;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #01afde;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .stat-desc {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.4;
+  }
+}
+
+.mini-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.mini-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  i {
+    width: 36px;
+    height: 36px;
+    background: rgba(1, 175, 222, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    strong {
+      font-size: 0.88rem;
+      color: white;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+    }
+  }
+}
+
+.opportunity-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(1, 175, 222, 0.12);
+  border: 1px solid rgba(1, 175, 222, 0.3);
+  border-radius: 12px;
+  padding: 16px;
+
+  i {
+    color: #e0f9ff;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    strong {
+      font-size: 0.88rem;
+      color: white;
+    }
+
+    span {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.7);
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .why-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .stats-visual {
+    position: static;
+  }
+}

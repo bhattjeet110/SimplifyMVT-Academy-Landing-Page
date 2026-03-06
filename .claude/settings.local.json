@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \":*)",
+      "Bash(sed -i 's/background: var\\(--accent\\);/background: linear-gradient\\(135deg, #27669a, #01afde\\);/' \"c:/2026/SimplifyMVT Academy/src/styles.scss\")",
+      "Bash(sed -i 's/border-color: var\\(--accent\\);/border-color: transparent;/' \"c:/2026/SimplifyMVT Academy/src/styles.scss\")",
+      "Bash(sed -i 's/box-shadow: 0 4px 15px rgba\\(255, 107, 53, 0.35\\);/box-shadow: 0 4px 20px rgba\\(39, 102, 154, 0.35\\);/' \"c:/2026/SimplifyMVT Academy/src/styles.scss\")",
+      "Bash(sed -i 's/background: var\\(--accent-dark\\);/background: linear-gradient\\(135deg, #1e4f78, #0190b8\\);/' \"c:/2026/SimplifyMVT Academy/src/styles.scss\")",
+      "Bash(sed -i 's/border-color: var\\(--accent-dark\\);/border-color: transparent;/' \"c:/2026/SimplifyMVT Academy/src/styles.scss\")",
+      "Bash(sed -i 's/box-shadow: 0 6px 25px rgba\\(255, 107, 53, 0.5\\);/box-shadow: 0 6px 28px rgba\\(39, 102, 154, 0.5\\);/' \"c:/2026/SimplifyMVT Academy/src/styles.scss\")",
+      "Bash(sed -i 's/--accent: #FF6B35;/--accent: #01afde;/' \"c:/2026/SimplifyMVT Academy/src/styles.scss\")",
+      "Bash(sed -i 's/--accent-dark: #1e4f78;/--accent-dark: #0190b8;/' \"c:/2026/SimplifyMVT Academy/src/styles.scss\")",
+      "Bash(sed -i 's/--accent-light: #FF8C5A;/--accent-light: #33c0e5;/' \"c:/2026/SimplifyMVT Academy/src/styles.scss\")"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+<header class="navbar" [class.scrolled]="isScrolled">
+  <div class="container">
+    <div class="navbar-inner">
+
+      <!-- Logo -->
+      <a class="navbar-brand" (click)="scrollTo('#hero')" style="cursor:pointer;">
+        <div class="logo-wrapper">
+          <img src="assets/images/logo.png" alt="SimplifyMVT Academy Logo" class="logo-img"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="logo-fallback" style="display:none;">
+            <div class="logo-icon">
+              <span class="logo-s">S</span>
+            </div>
+            <div class="logo-text">
+              <span class="brand-top">Simplify<span class="brand-mvt">MVT</span></span>
+              <span class="brand-bottom">Academy</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links">
+        <a *ngFor="let link of navLinks"
+           (click)="scrollTo(link.anchor)"
+           class="nav-link">
+          {{ link.label }}
+        </a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="navbar-cta">
+        <a (click)="scrollTo('#contact')" class="btn btn-primary btn-sm" style="cursor:pointer;">
+          Apply Now
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+    <nav>
+      <a *ngFor="let link of navLinks"
+         (click)="scrollTo(link.anchor)"
+         class="mobile-nav-link">
+        {{ link.label }}
+      </a>
+      <a (click)="scrollTo('#contact')" class="btn btn-primary" style="margin-top: 16px; cursor:pointer;">
+        Apply Now
+      </a>
+    </nav>
+  </div>
+</header>

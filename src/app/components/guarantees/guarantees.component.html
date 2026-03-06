@@ -1,0 +1,45 @@
+<section class="guarantees section" id="guarantees">
+  <div class="container">
+
+    <!-- Main Guarantee Cards -->
+    <div class="guarantee-cards">
+
+      <div class="g-card g-card-placement">
+        <div class="g-card-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h3>100% Placement<br>Guarantee</h3>
+        <p>We stand behind our training. Full placement support for every eligible candidate who completes the program.</p>
+        <div class="g-card-badge">Industry Assured</div>
+      </div>
+
+      <div class="g-card g-card-cashback">
+        <div class="g-card-icon">
+          <i class="fas fa-hand-holding-usd"></i>
+        </div>
+        <h3>50% Cash Back<br>Guarantee*</h3>
+        <p>If placement criteria is not fulfilled as per our policy terms, we return 50% of your investment.</p>
+        <div class="g-card-badge">*Terms & Conditions Apply</div>
+      </div>
+
+    </div>
+
+    <!-- Tagline -->
+    <div class="commitment-text">
+      <div class="divider"></div>
+      <h2>We don't just enroll students</h2>
+      <h2 class="accent-text">We are committed to building careers.</h2>
+    </div>
+
+    <!-- Features List -->
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of features">
+        <div class="feature-icon">
+          <i [class]="feature.icon"></i>
+        </div>
+        <p>{{ feature.text }}</p>
+      </div>
+    </div>
+
+  </div>
+</section>

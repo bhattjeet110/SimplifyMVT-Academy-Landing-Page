@@ -1,0 +1,61 @@
+<section class="class-details section section-alt" id="class-details">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Offline Program</span>
+      <h2>Class Details</h2>
+      <div class="divider"></div>
+      <p>Join our structured offline program designed to give you hands-on experience in the Medical Tourism industry.</p>
+    </div>
+
+    <div class="details-layout">
+
+      <!-- Left: Details Cards -->
+      <div class="details-grid">
+        <div class="detail-card" *ngFor="let detail of details" [class.highlight-card]="detail.highlight">
+          <div class="detail-icon">
+            <i [class]="detail.icon"></i>
+          </div>
+          <div class="detail-info">
+            <span class="detail-label">{{ detail.label }}</span>
+            <strong class="detail-value">{{ detail.value }}</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: CTA Panel -->
+      <div class="cta-panel">
+        <div class="panel-content">
+          <div class="panel-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Ready to Start Your<br>Medical Tourism Career?</h3>
+          <p>Join the next batch and transform your career with India's most practical Medical Tourism training program.</p>
+
+          <div class="upcoming-batch">
+            <div class="batch-label">
+              <i class="fas fa-fire"></i>
+              Upcoming Batch
+            </div>
+            <p class="batch-note">Contact us to know the next batch date</p>
+          </div>
+
+          <a (click)="scrollTo('#contact')" class="btn btn-primary btn-lg" style="width:100%; cursor:pointer; display:flex; justify-content:center;">
+            <i class="fas fa-rocket"></i>
+            Apply Now
+          </a>
+
+          <a (click)="scrollTo('#contact')" class="btn btn-outline-primary" style="width:100%; margin-top:12px; cursor:pointer; display:flex; justify-content:center;">
+            <i class="fas fa-phone-alt"></i>
+            Talk to Counselor
+          </a>
+
+          <p class="seats-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            Limited seats — Enroll today!
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

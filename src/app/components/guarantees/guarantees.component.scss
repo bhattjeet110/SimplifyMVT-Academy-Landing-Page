@@ -1,0 +1,195 @@
+.guarantees {
+  background: linear-gradient(180deg, #ffffff 0%, var(--light-bg) 100%);
+}
+
+.guarantee-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 56px;
+}
+
+.g-card {
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 20px 0 12px;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+}
+
+.g-card-placement {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  box-shadow: 0 20px 60px rgba(39, 102, 154, 0.3);
+
+  &::before {
+    background: var(--secondary);
+  }
+
+  h3 { color: white; }
+  p { color: rgba(255,255,255,0.8); }
+
+  .g-card-icon {
+    background: rgba(255,255,255,0.15);
+    i { color: white; }
+  }
+
+  .g-card-badge {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+}
+
+.g-card-cashback {
+  background: white;
+  border: 2px solid rgba(1, 175, 222, 0.2);
+  box-shadow: var(--shadow-lg);
+
+  &::before {
+    background: linear-gradient(90deg, var(--secondary), #01afde);
+  }
+
+  h3 { color: var(--primary); }
+  p { color: var(--gray); }
+
+  .g-card-icon {
+    background: linear-gradient(135deg, rgba(1, 175, 222, 0.1), rgba(1, 175, 222, 0.1));
+    i { color: #01afde; }
+  }
+
+  .g-card-badge {
+    background: rgba(1, 175, 222, 0.1);
+    color: #27669a;
+    border: 1px solid rgba(1, 175, 222, 0.15);
+  }
+}
+
+.g-card-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  i {
+    font-size: 2rem;
+  }
+}
+
+.g-card-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Commitment */
+.commitment-text {
+  text-align: center;
+  margin-bottom: 48px;
+
+  h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--dark-gray);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .accent-text {
+    color: var(--secondary);
+    font-weight: 800;
+  }
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+
+  &:hover {
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+      color: white;
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin: 0;
+    line-height: 1.5;
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guarantee-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .g-card {
+    padding: 36px 28px;
+  }
+}

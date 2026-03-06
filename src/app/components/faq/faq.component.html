@@ -1,0 +1,84 @@
+<section class="faq section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Got Questions?</span>
+      <h2>Frequently Asked <span style="color:var(--secondary);">Questions</span></h2>
+      <div class="divider"></div>
+      <p>Everything you need to know about SimplifyMVT Academy and the Medical Tourism course.</p>
+    </div>
+
+    <div class="faq-layout">
+
+      <!-- Accordion -->
+      <div class="faq-list">
+        <div class="faq-item" *ngFor="let faq of faqs; let i = index" [class.open]="faq.isOpen">
+          <div class="faq-header" (click)="toggle(faq)">
+            <div class="faq-q-icon">
+              <span>Q</span>
+            </div>
+            <h4>{{ faq.question }}</h4>
+            <div class="faq-toggle">
+              <i class="fas" [class.fa-plus]="!faq.isOpen" [class.fa-minus]="faq.isOpen"></i>
+            </div>
+          </div>
+          <div class="faq-body" [class.open]="faq.isOpen">
+            <div class="faq-answer">
+              <i class="fas fa-circle-dot answer-icon"></i>
+              <p>{{ faq.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="faq-sidebar">
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4>Still Have Questions?</h4>
+          <p>Our counselors are here to help you make the right career decision.</p>
+          <div class="contact-options">
+            <a href="https://wa.me/91XXXXXXXXXX" class="contact-option whatsapp">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp Us</span>
+            </a>
+            <a href="tel:+91XXXXXXXXXX" class="contact-option call">
+              <i class="fas fa-phone-alt"></i>
+              <span>Call Us</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="quick-facts">
+          <h4>Quick Facts</h4>
+          <div class="fact-item">
+            <i class="fas fa-check-circle"></i>
+            <span>No prior experience needed</span>
+          </div>
+          <div class="fact-item">
+            <i class="fas fa-check-circle"></i>
+            <span>100% Placement Guarantee</span>
+          </div>
+          <div class="fact-item">
+            <i class="fas fa-check-circle"></i>
+            <span>50% Cash Back Guarantee*</span>
+          </div>
+          <div class="fact-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Live Hospital Visit Included</span>
+          </div>
+          <div class="fact-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Certificate of Completion</span>
+          </div>
+          <div class="fact-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Weekend-only Classes</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

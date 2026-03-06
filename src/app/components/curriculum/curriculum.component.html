@@ -1,0 +1,98 @@
+<section class="curriculum section section-alt" id="curriculum">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">What You Will Learn</span>
+      <h2>10-Session Mastermind Class<br>in <span style="color: var(--secondary);">Medical Tourism</span></h2>
+      <div class="divider"></div>
+      <p>That Can Change Your Career Direction</p>
+    </div>
+
+    <div class="curriculum-layout">
+
+      <!-- Session Accordion -->
+      <div class="sessions-list">
+        <div class="session-item" *ngFor="let session of sessions" [class.open]="session.isOpen">
+
+          <div class="session-header" (click)="toggleSession(session)">
+            <div class="session-left">
+              <div class="session-num">{{ session.number }}</div>
+              <div class="session-icon">
+                <i [class]="session.icon"></i>
+              </div>
+              <div class="session-info">
+                <h4>Session {{ session.number }} – {{ session.title }}</h4>
+                <p>{{ session.description }}</p>
+              </div>
+            </div>
+            <div class="session-toggle">
+              <i class="fas" [class.fa-chevron-down]="!session.isOpen" [class.fa-chevron-up]="session.isOpen"></i>
+            </div>
+          </div>
+
+          <div class="session-body" [class.open]="session.isOpen">
+            <ul class="topics-list">
+              <li *ngFor="let topic of session.topics">
+                <i class="fas fa-check"></i>
+                {{ topic }}
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sidebar Summary -->
+      <div class="curriculum-sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-header">
+            <i class="fas fa-book-open"></i>
+            <h4>Program Highlights</h4>
+          </div>
+          <div class="highlight-list">
+            <div class="h-item">
+              <i class="fas fa-check-circle"></i>
+              <span>10 Power-Packed Sessions</span>
+            </div>
+            <div class="h-item">
+              <i class="fas fa-check-circle"></i>
+              <span>3 Months Duration</span>
+            </div>
+            <div class="h-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Every Saturday – Offline</span>
+            </div>
+            <div class="h-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Real Hospital Visit</span>
+            </div>
+            <div class="h-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Interview Preparation</span>
+            </div>
+            <div class="h-item">
+              <i class="fas fa-check-circle"></i>
+              <span>100% Placement Support</span>
+            </div>
+            <div class="h-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Business Setup Guidance</span>
+            </div>
+            <div class="h-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Certificate of Completion</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="session-count-card">
+          <div class="count-circle">
+            <span class="count-num">10</span>
+            <span class="count-text">Sessions</span>
+          </div>
+          <p>Structured sessions designed to take you from beginner to industry-ready professional.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

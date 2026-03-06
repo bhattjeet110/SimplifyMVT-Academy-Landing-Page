@@ -1,0 +1,36 @@
+<section class="cta-mid section">
+  <div class="cta-bg">
+    <div class="bg-pattern"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content">
+      <div class="cta-text">
+        <h2>Your Career Doesn't Need 2 Years…</h2>
+        <h2 class="accent-line">It Needs the <span>Right Direction.</span></h2>
+        <p>Medical Tourism is a growing healthcare business industry. Take the first step today and secure your future in one of India's fastest-growing sectors.</p>
+
+        <div class="cta-highlights">
+          <div class="cta-highlight" *ngFor="let item of highlights">
+            <i [class]="item.icon"></i>
+            <span>{{ item.text }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-buttons">
+        <a (click)="scrollTo('#contact')" class="btn btn-primary btn-lg" style="cursor:pointer;">
+          <i class="fas fa-chair"></i>
+          Reserve Your Seat Now
+        </a>
+        <a (click)="scrollTo('#contact')" class="btn btn-secondary btn-lg" style="cursor:pointer;">
+          <i class="fas fa-headset"></i>
+          Talk to Counselor
+        </a>
+        <p class="limited-note">
+          <i class="fas fa-exclamation-circle"></i>
+          Limited Seats Available
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

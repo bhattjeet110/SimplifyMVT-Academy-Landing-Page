@@ -1,0 +1,84 @@
+<section class="why-medical section" id="why-medical-tourism">
+  <div class="container">
+
+    <div class="why-layout">
+
+      <!-- Left: Content -->
+      <div class="why-content">
+        <span class="section-badge">Growing Industry</span>
+        <h2>Why <span class="highlight">Medical Tourism?</span></h2>
+        <div class="divider" style="margin: 0 0 24px;"></div>
+        <p class="lead-text">
+          Medical Tourism is one of the <strong>fastest-growing industries globally.</strong>
+          India has become a preferred destination for international patients.
+        </p>
+        <p>
+          We don't just teach theory — We prepare you for a real industry.
+          Our training includes practical exposure and hospital visits so you understand
+          real operations, not just classroom concepts.
+        </p>
+
+        <div class="reasons-grid">
+          <div class="reason-card" *ngFor="let reason of reasons; let i = index">
+            <div class="reason-number">{{ i + 1 }}</div>
+            <div class="reason-icon">
+              <i [class]="reason.icon"></i>
+            </div>
+            <div class="reason-text">
+              <h4>{{ reason.title }}</h4>
+              <p>{{ reason.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual Stat Block -->
+      <div class="stats-visual">
+        <div class="visual-bg">
+          <div class="big-stat">
+            <span class="stat-num">60-80%</span>
+            <span class="stat-desc">Lower treatment cost<br>vs Western countries</span>
+          </div>
+          <div class="mini-stats">
+            <div class="mini-stat">
+              <i class="fas fa-globe-asia"></i>
+              <div>
+                <strong>Top Global Destination</strong>
+                <span>For Medical Tourism</span>
+              </div>
+            </div>
+            <div class="mini-stat">
+              <i class="fas fa-plane-arrival"></i>
+              <div>
+                <strong>Africa, Middle East,</strong>
+                <span>SAARC & Asia patients</span>
+              </div>
+            </div>
+            <div class="mini-stat">
+              <i class="fas fa-chart-line"></i>
+              <div>
+                <strong>Growing Year on Year</strong>
+                <span>International patient inflow</span>
+              </div>
+            </div>
+            <div class="mini-stat">
+              <i class="fas fa-city"></i>
+              <div>
+                <strong>Mumbai — Leading City</strong>
+                <span>For international treatments</span>
+              </div>
+            </div>
+          </div>
+          <div class="opportunity-banner">
+            <i class="fas fa-rocket"></i>
+            <div>
+              <strong>Career Opportunity Awaits</strong>
+              <span>Entry-level salary: ₹25,000 – ₹80,000/month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

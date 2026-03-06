@@ -1,0 +1,157 @@
+<section class="hero" id="hero">
+  <!-- Animated Background Elements -->
+  <div class="hero-bg">
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <div class="bg-circle circle-3"></div>
+    <div class="bg-dots"></div>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+
+      <!-- Left Content -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <i class="fas fa-graduation-cap"></i>
+          <span>India's Premier Medical Tourism Academy</span>
+        </div>
+
+        <h1 class="hero-title">
+          From <span class="highlight-cyan">Confusion</span><br>
+          to <span class="highlight-orange">Career</span>
+        </h1>
+
+        <div class="guarantee-pills">
+          <div class="pill pill-green">
+            <i class="fas fa-check-circle"></i>
+            100% Placement Guarantee
+          </div>
+          <div class="pill pill-orange">
+            <i class="fas fa-coins"></i>
+            50% Cash Back Guarantee*
+          </div>
+        </div>
+
+        <p class="hero-subtitle">
+          Stop guessing your future. Start building a real career in the
+          <strong>fast-growing Medical Tourism industry.</strong>
+        </p>
+
+        <p class="hero-desc">
+          SimplifyMVT Academy helps freshers, graduates, and aspiring entrepreneurs
+          enter the healthcare business industry with practical training, hospital
+          exposure, and structured placement support.
+        </p>
+
+        <div class="hero-features">
+          <div class="feature-item">
+            <i class="fas fa-hospital"></i>
+            <span>Real Hospital Visits</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-briefcase"></i>
+            <span>Placement Support</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-users"></i>
+            <span>Small Batch Size</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Andheri East, Mumbai</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a (click)="scrollToSection('#contact')" class="btn btn-primary btn-lg" style="cursor:pointer;">
+            <i class="fas fa-rocket"></i>
+            Apply Now — Limited Seats
+          </a>
+          <a (click)="scrollToSection('#curriculum')" class="btn btn-outline-hero btn-lg" style="cursor:pointer;">
+            <i class="fas fa-play-circle"></i>
+            View Curriculum
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual Card -->
+      <div class="hero-visual">
+        <div class="visual-card">
+
+          <div class="card-header">
+            <div class="card-logo">
+              <img src="assets/images/logo.png" alt="SimplifyMVT Academy"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="logo-text-fallback" style="display:none;">
+                <span class="logo-brand">Simplify<span>MVT</span> Academy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-tagline">
+            <h3>Learn. Get Skilled.<br><span>Get Placed.</span></h3>
+          </div>
+
+          <div class="card-stats">
+            <div class="stat-item" *ngFor="let stat of stats">
+              <div class="stat-value">{{ stat.value }}</div>
+              <div class="stat-label">{{ stat.label }}</div>
+            </div>
+          </div>
+
+          <div class="card-info">
+            <div class="info-row">
+              <i class="fas fa-calendar-alt"></i>
+              <div>
+                <strong>Every Saturday</strong>
+                <span>Offline Classroom Training</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>3 Months</strong>
+                <span>10 Power-Packed Sessions</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Andheri East, Mumbai</strong>
+                <span>Prime Business Location</span>
+              </div>
+            </div>
+          </div>
+
+          <a (click)="scrollToSection('#contact')" class="btn btn-card-cta" style="width:100%; cursor:pointer; text-align:center; display:flex; justify-content:center;">
+            Reserve Your Seat Now
+          </a>
+
+          <p class="seats-note">
+            <i class="fas fa-fire text-accent"></i>
+            Limited seats available — Act fast!
+          </p>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="float-badge badge-1">
+          <i class="fas fa-star"></i>
+          Industry Experts
+        </div>
+        <div class="float-badge badge-2">
+          <i class="fas fa-certificate"></i>
+          Certificate Course
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Wave -->
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>

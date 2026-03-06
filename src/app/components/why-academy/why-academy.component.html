@@ -1,0 +1,27 @@
+<section class="why-academy section" id="why-academy">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Our Advantage</span>
+      <h2>Why <span style="color:var(--secondary);">SimplifyMVT Academy?</span></h2>
+      <div class="divider"></div>
+      <p>We're not just another training institute. Here's what sets us apart from the rest.</p>
+    </div>
+
+    <div class="reasons-grid">
+      <div class="reason-card" *ngFor="let reason of reasons" [class]="'card-' + reason.color">
+        <div class="reason-header">
+          <div class="reason-num">{{ reason.number }}</div>
+          <div class="reason-icon">
+            <i [class]="reason.icon"></i>
+          </div>
+        </div>
+        <h3>{{ reason.title }}</h3>
+        <p>{{ reason.desc }}</p>
+        <div class="card-arrow">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

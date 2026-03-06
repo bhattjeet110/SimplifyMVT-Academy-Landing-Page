@@ -1,0 +1,75 @@
+<section class="final-cta">
+  <div class="final-bg">
+    <div class="final-pattern"></div>
+  </div>
+
+  <div class="container">
+    <div class="final-content">
+
+      <div class="final-left">
+        <div class="final-badge">
+          <i class="fas fa-fire"></i>
+          Final Opportunity
+        </div>
+        <h2>If You Are…</h2>
+
+        <div class="audience-list">
+          <div class="audience-item" *ngFor="let item of targetAudience">
+            <div class="check-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <span>{{ item }}</span>
+          </div>
+        </div>
+
+        <div class="conclusion-text">
+          <p><strong class="highlight-white">Then this program is for you.</strong></p>
+          <p>Your confusion ends here.</p>
+          <p class="big-text">Your professional journey begins here.</p>
+        </div>
+      </div>
+
+      <div class="final-right">
+        <div class="final-card">
+          <div class="card-top">
+            <div class="card-logo">
+              <img src="assets/images/logo.png" alt="SimplifyMVT Academy"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+              <span style="display:none; font-size:1.2rem; font-weight:800; color:var(--primary);">
+                Simplify<span style="color:var(--secondary);">MVT</span> Academy
+              </span>
+            </div>
+          </div>
+
+          <div class="final-highlights">
+            <div class="fh-item" *ngFor="let h of highlights">
+              <i [class]="h.icon"></i>
+              <span>{{ h.text }}</span>
+            </div>
+          </div>
+
+          <div class="final-actions">
+            <a (click)="scrollTo('#contact')" class="btn btn-primary btn-lg" style="width:100%; cursor:pointer; justify-content:center; display:flex;">
+              <i class="fas fa-rocket"></i>
+              Apply Now
+            </a>
+            <a (click)="scrollTo('#contact')" class="btn btn-teal" style="width:100%; cursor:pointer; justify-content:center; display:flex;">
+              <i class="fas fa-calendar-check"></i>
+              Book Free Counseling
+            </a>
+            <a (click)="scrollTo('#contact')" class="btn btn-secondary" style="width:100%; cursor:pointer; justify-content:center; display:flex;">
+              <i class="fas fa-user-plus"></i>
+              Register Today
+            </a>
+          </div>
+
+          <div class="seats-alert">
+            <i class="fas fa-exclamation-circle"></i>
+            Limited Seats Available — Don't Miss Out!
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,160 @@
+<section class="contact section section-alt" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Get In Touch</span>
+      <h2>Have Questions? <span style="color:var(--secondary);">We're Here to Help.</span></h2>
+      <div class="divider"></div>
+      <p>Fill in the form below and our counselors will reach out to you within 24 hours.</p>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="info-card">
+          <h3>Get in Touch</h3>
+          <p>Connect with our team to learn more about the program and how it can transform your career.</p>
+
+          <div class="info-items">
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <strong>Address</strong>
+                <span>Andheri East, Mumbai, Maharashtra</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>Contact us on WhatsApp for quick response</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <span>info&#64;simplifymvtacademy.com</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <strong>Office Hours</strong>
+                <span>Monday – Saturday: 10 AM – 6 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.instagram.com/simplifymvtacademy/" class="social-btn" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/showcase/simplifymvt-academy/?viewAsMember=true" class="social-btn" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.youtube.com/playlist?list=PLyXaihWos2KKHW2rW9InXL96S4miIsyWP" class="social-btn" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/people/Simplifymvt-Academy/100094510652528/" class="social-btn" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form-wrapper">
+
+        <!-- Success State -->
+        <div class="success-state" *ngIf="submitted">
+          <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>Thank You!</h3>
+          <p>We have received your inquiry. Our counselor will reach out to you within 24 hours.</p>
+          <button class="btn btn-primary" (click)="resetForm()">Submit Another</button>
+        </div>
+
+        <!-- Form -->
+        <form class="contact-form" *ngIf="!submitted" (ngSubmit)="onSubmit()">
+          <h3>Apply for the Program</h3>
+          <p class="form-subtitle">Fill in your details and our team will contact you shortly.</p>
+
+          <div class="form-group">
+            <label>Full Name *</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Enter your full name"
+                     [(ngModel)]="formData.name" name="name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <div class="input-wrapper">
+                <i class="fas fa-phone-alt"></i>
+                <input type="tel" placeholder="+91 XXXXX XXXXX"
+                       [(ngModel)]="formData.phone" name="phone" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="your@email.com"
+                       [(ngModel)]="formData.email" name="email">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Qualification</label>
+            <div class="input-wrapper">
+              <i class="fas fa-graduation-cap"></i>
+              <select [(ngModel)]="formData.qualification" name="qualification">
+                <option value="">Select your qualification</option>
+                <option *ngFor="let q of qualifications" [value]="q">{{ q }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Your Message (Optional)</label>
+            <textarea placeholder="Tell us about your career goals or any questions you have..."
+                      [(ngModel)]="formData.message" name="message" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg submit-btn" [disabled]="loading">
+            <span *ngIf="!loading">
+              <i class="fas fa-paper-plane"></i>
+              Submit & Get Counseling
+            </span>
+            <span *ngIf="loading">
+              <i class="fas fa-spinner fa-spin"></i>
+              Submitting...
+            </span>
+          </button>
+
+          <p class="form-note">
+            <i class="fas fa-shield-alt"></i>
+            Your information is 100% secure and will not be shared.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

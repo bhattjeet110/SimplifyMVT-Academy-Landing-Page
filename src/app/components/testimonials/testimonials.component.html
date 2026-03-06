@@ -1,0 +1,88 @@
+<section class="testimonials section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Student Reviews</span>
+      <h2>What Our <span style="color:var(--secondary);">Students Say</span></h2>
+      <div class="divider"></div>
+      <p>Real stories from real students who transformed their careers with SimplifyMVT Academy.</p>
+    </div>
+
+    <div class="testimonial-wrapper">
+
+      <!-- Main Testimonial -->
+      <div class="testimonial-main">
+        <div class="quote-icon">
+          <i class="fas fa-quote-left"></i>
+        </div>
+
+        <div class="testimonial-cards">
+          <div class="t-card" *ngFor="let t of testimonials; let i = index" [class.active]="i === activeIndex">
+            <div class="t-card-header">
+              <div class="t-avatar" [class]="'avatar-' + t.color">
+                {{ t.initial }}
+              </div>
+              <div class="t-info">
+                <h4>{{ t.name }}</h4>
+                <span>{{ t.role }}</span>
+                <div class="stars">
+                  <i class="fas fa-star" *ngFor="let s of stars"></i>
+                </div>
+              </div>
+            </div>
+            <p class="t-text">"{{ t.text }}"</p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="t-nav">
+          <button class="nav-btn" (click)="prev()">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="dots">
+            <button class="dot"
+                    *ngFor="let t of testimonials; let i = index"
+                    [class.active]="i === activeIndex"
+                    (click)="goTo(i)">
+            </button>
+          </div>
+          <button class="nav-btn" (click)="next()">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="testimonial-stats">
+        <div class="t-stat">
+          <div class="t-stat-icon">
+            <i class="fas fa-smile"></i>
+          </div>
+          <div class="t-stat-value">100%</div>
+          <div class="t-stat-label">Student Satisfaction</div>
+        </div>
+        <div class="t-stat">
+          <div class="t-stat-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="t-stat-value">5.0</div>
+          <div class="t-stat-label">Average Rating</div>
+        </div>
+        <div class="t-stat">
+          <div class="t-stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="t-stat-value">100+</div>
+          <div class="t-stat-label">Lives Impacted</div>
+        </div>
+        <div class="t-stat">
+          <div class="t-stat-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="t-stat-value">Assured</div>
+          <div class="t-stat-label">Placement Support</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

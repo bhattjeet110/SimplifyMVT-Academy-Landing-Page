@@ -1,0 +1,60 @@
+<section class="industry-growth section section-alt" id="industry-growth">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-badge">Still Confused?</span>
+      <h2>Look at the Growth of<br><span style="color:var(--secondary);">Medical Tourism Industry</span></h2>
+      <div class="divider"></div>
+      <p>Medical Tourism is strongly supported by government initiatives and growing year on year.</p>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="growth-stats">
+      <div class="g-stat" *ngFor="let h of highlights">
+        <div class="g-stat-icon">
+          <i [class]="h.icon"></i>
+        </div>
+        <div class="g-stat-value">{{ h.value }}</div>
+        <div class="g-stat-sub">{{ h.sub }}</div>
+        <p class="g-stat-desc">{{ h.desc }}</p>
+      </div>
+    </div>
+
+    <!-- Government Initiatives -->
+    <div class="govt-section">
+      <div class="govt-header">
+        <div class="govt-icon">
+          <i class="fas fa-flag"></i>
+        </div>
+        <div>
+          <h3>Government of India Initiatives</h3>
+          <p>Backed by strong government policies and support systems</p>
+        </div>
+      </div>
+
+      <div class="initiatives-list">
+        <div class="initiative-item" *ngFor="let item of initiatives">
+          <div class="initiative-icon">
+            <i [class]="item.icon"></i>
+          </div>
+          <span>{{ item.text }}</span>
+        </div>
+      </div>
+
+      <div class="govt-links">
+        <p>For official government information:</p>
+        <div class="link-pills">
+          <a href="https://tourism.gov.in" target="_blank" class="link-pill">
+            <i class="fas fa-external-link-alt"></i>
+            Ministry of Tourism
+          </a>
+          <a href="https://www.mohfw.gov.in" target="_blank" class="link-pill">
+            <i class="fas fa-external-link-alt"></i>
+            Ministry of Health & Family Welfare
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

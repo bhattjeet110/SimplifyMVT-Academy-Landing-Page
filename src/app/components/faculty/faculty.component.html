@@ -1,0 +1,44 @@
+<section class="faculty section" id="faculty">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Expert Mentors</span>
+      <h2>Learn From The <span style="color:var(--secondary);">Top Faculties</span></h2>
+      <div class="divider"></div>
+      <p>Our expert faculty brings real industry experience to the classroom, ensuring you learn what actually matters.</p>
+    </div>
+
+    <div class="faculty-grid">
+      <div class="faculty-card" *ngFor="let member of faculty" [class]="'card-' + member.color">
+
+        <div class="faculty-avatar">
+          <div class="avatar-circle" [class]="'avatar-' + member.color">
+            <i [class]="member.icon"></i>
+          </div>
+          <div class="avatar-badge">
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="faculty-info">
+          <h3>{{ member.name }}</h3>
+          <div class="faculty-role">{{ member.role }}</div>
+          <div class="faculty-exp">
+            <i class="fas fa-award"></i>
+            {{ member.experience }}
+          </div>
+          <p class="faculty-spec">
+            <strong>Specialized in:</strong> {{ member.specialization }}
+          </p>
+        </div>
+
+        <div class="faculty-skills">
+          <div class="skill-tag" *ngFor="let skill of member.skills">
+            {{ skill }}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

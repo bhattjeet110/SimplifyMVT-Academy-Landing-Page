@@ -1,0 +1,120 @@
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/images/logo.png" alt="SimplifyMVT Academy"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo-text-fallback" style="display:none; align-items:center; gap:10px;">
+              <div
+                style="width:40px;height:40px;background:linear-gradient(135deg,#01afde,#27669a);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+                <span style="color:white;font-weight:900;font-size:1.2rem;">S</span>
+              </div>
+              <div>
+                <span style="font-size:1rem;font-weight:700;color:white;">Simplify<span
+                    style="color:#01afde;">MVT</span></span><br>
+                <span
+                  style="font-size:0.65rem;color:rgba(255,255,255,0.6);letter-spacing:2px;text-transform:uppercase;">Academy</span>
+              </div>
+            </div>
+          </div>
+          <p>Empowering the next generation of Medical Tourism professionals with practical, industry-focused training
+            and 100% placement support.</p>
+          <div class="footer-tagline">
+            <i class="fas fa-graduation-cap"></i>
+            Learn. Get Skilled. Get Placed.
+          </div>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/simplifymvtacademy/" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/showcase/simplifymvt-academy/?viewAsMember=true" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/playlist?list=PLyXaihWos2KKHW2rW9InXL96S4miIsyWP" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/people/Simplifymvt-Academy/100094510652528/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <!-- <a href="https://wa.me/91XXXXXXXXXX" title="WhatsApp"><i class="fab fa-whatsapp"></i></a> -->
+            <a href="https://x.com/Simplifymv13139" title="Twitter / X" target="_blank">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li *ngFor="let link of quickLinks">
+              <a (click)="scrollTo(link.anchor)" style="cursor:pointer;">
+                <i class="fas fa-chevron-right"></i>
+                {{ link.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Program -->
+        <div class="footer-links">
+          <h4>Program</h4>
+          <ul>
+            <li *ngFor="let link of programLinks">
+              <a (click)="scrollTo(link.anchor)" style="cursor:pointer;">
+                <i class="fas fa-chevron-right"></i>
+                {{ link.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Address</strong>
+                <span>Andheri East, Mumbai,<br>Maharashtra, India</span>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>Chat with us on WhatsApp</span>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <span>info&#64;simplifymvtacademy.com</span>
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>Hours</strong>
+                <span>Mon–Sat: 10 AM – 6 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p>&copy; {{ currentYear }} SimplifyMVT Academy. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Refund Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
